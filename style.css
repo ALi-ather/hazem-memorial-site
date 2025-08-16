@@ -1,0 +1,462 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', 'Amiri', Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    direction: rtl;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #2c5530 0%, #3d7c47 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.main-title {
+    font-family: 'Amiri', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Main Content */
+.main-content {
+    padding: 60px 0;
+}
+
+/* Photo and Prayer Section */
+.photo-prayer-section {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.photo-container {
+    margin-bottom: 40px;
+}
+
+.memorial-photo {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.memorial-photo:hover {
+    transform: translateY(-5px);
+}
+
+.memorial-photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.prayer-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-prayer {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    line-height: 2;
+    color: #2c3e50;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border-right: 5px solid #3d7c47;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Tasbih Section */
+.tasbih-section {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.5rem;
+    color: #2c5530;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #5a6c7d;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.tasbih-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tasbih-btn {
+    background: linear-gradient(135deg, #3d7c47 0%, #2c5530 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 25px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(61, 124, 71, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.tasbih-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.tasbih-btn:hover::before {
+    left: 100%;
+}
+
+.tasbih-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(61, 124, 71, 0.4);
+}
+
+.tasbih-btn:active {
+    transform: translateY(-1px);
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.tasbih-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+}
+
+.tasbih-count {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    min-width: 50px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.total-counter {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #e9ecef;
+}
+
+.total-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c5530;
+    margin-bottom: 20px;
+    font-family: 'Amiri', serif;
+}
+
+.reset-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Quran Section */
+.quran-section {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.quran-description {
+    font-size: 1.2rem;
+    color: #5a6c7d;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.audio-player {
+    margin: 30px 0;
+}
+
+.audio-player audio {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Share Section */
+.share-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: 2px solid #dee2e6;
+}
+
+.share-title {
+    font-family: 'Amiri', serif;
+    font-size: 2rem;
+    color: #2c5530;
+    margin-bottom: 15px;
+}
+
+.share-description {
+    font-size: 1.1rem;
+    color: #5a6c7d;
+    margin-bottom: 30px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.share-btn.whatsapp {
+    background: #25D366;
+}
+
+.share-btn.facebook {
+    background: #1877F2;
+}
+
+.share-btn.copy {
+    background: #6c757d;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-prayer {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.footer-note {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .photo-prayer-section,
+    .tasbih-section,
+    .quran-section {
+        padding: 30px 20px;
+    }
+    
+    .memorial-photo img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .main-prayer {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .tasbih-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .tasbih-btn {
+        padding: 20px 15px;
+        font-size: 1rem;
+    }
+    
+    .share-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .share-btn {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .memorial-photo img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .main-prayer {
+        font-size: 1.1rem;
+    }
+    
+    .tasbih-text {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.photo-prayer-section,
+.tasbih-section,
+.quran-section,
+.share-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Placeholder image styling */
+.memorial-photo img[src*="placeholder"] {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.memorial-photo img[src*="placeholder"]::after {
+    content: "صورة المرحوم";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

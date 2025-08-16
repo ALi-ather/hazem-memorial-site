@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صدقة جارية على روح المرحوم حازم محمد عقل</title>
+    
+    <!-- Meta Tags for Social Sharing -->
+    <meta property="og:title" content="صدقة جارية على روح المرحوم حازم محمد عقل">
+    <meta property="og:description" content="اللهم اجعلها نورًا ورحمةً ورفعةً لدرجته - موقع تذكاري للمرحوم حازم محمد عقل">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./memorial-placeholder.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="صدقة جارية على روح المرحوم حازم محمد عقل">
+    <meta name="twitter:description" content="اللهم اجعلها نورًا ورحمةً ورفعةً لدرجته">
+    <meta name="twitter:image" content="./memorial-placeholder.jpg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2c5530">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ذكرى حازم">
+    <link rel="apple-touch-icon" href="./memorial-placeholder.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./memorial-placeholder.jpg">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="main-title">صدقة جارية على روح المرحوم حازم محمد عقل</h1>
+            <p class="subtitle">اللهم اجعلها نورًا ورحمةً ورفعةً لدرجته</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Photo and Prayer Section -->
+            <section class="photo-prayer-section">
+                <div class="photo-container">
+                    <div class="memorial-photo">
+                        <img src="./memorial-placeholder.jpg" alt="المرحوم حازم محمد عقل" id="memorial-image">
+                        <div class="photo-overlay">
+                            <span>المرحوم حازم محمد عقل</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="prayer-text">
+                    <p class="main-prayer" data-prayer="main">
+                        اللهم ارحم عبدك حازم محمد عقل رحمةً واسعة، واغفر له، وارضَ عنه، وثبّته عند السؤال، واجعل قبره روضةً من رياض الجنة، واجعل نورك عليه نورًا لا ينقطع، وارفع درجته في علّيّين.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Tasbih Counter Section -->
+            <section class="tasbih-section">
+                <h2 class="section-title">التسبيح وهدية الأجر</h2>
+                <p class="section-description">
+                    اهدِ ثواب التسبيح الآن، وانْوِ الأجر للمرحوم: اللهم اجعل ثواب ما أذكره على روح عبدك حازم محمد عقل.
+                </p>
+                
+                <div class="tasbih-buttons">
+                    <button class="tasbih-btn" data-tasbih="سبحان الله وبحمده" onclick="incrementTasbih(this)">
+                        <span class="tasbih-text">سبحان الله وبحمده</span>
+                        <span class="tasbih-count" id="count-1">0</span>
+                    </button>
+                    
+                    <button class="tasbih-btn" data-tasbih="الحمد لله" onclick="incrementTasbih(this)">
+                        <span class="tasbih-text">الحمد لله</span>
+                        <span class="tasbih-count" id="count-2">0</span>
+                    </button>
+                    
+                    <button class="tasbih-btn" data-tasbih="الله أكبر" onclick="incrementTasbih(this)">
+                        <span class="tasbih-text">الله أكبر</span>
+                        <span class="tasbih-count" id="count-3">0</span>
+                    </button>
+                    
+                    <button class="tasbih-btn" data-tasbih="اللهم ارفع درجته" onclick="incrementTasbih(this)">
+                        <span class="tasbih-text">اللهم ارفع درجته</span>
+                        <span class="tasbih-count" id="count-4">0</span>
+                    </button>
+                </div>
+                
+                <div class="total-counter">
+                    <p class="total-text">عدد التسبيحات المُهداه: <span id="total-count">0</span></p>
+                    <button class="reset-btn" onclick="resetCounters()">إعادة تعيين العداد</button>
+                </div>
+            </section>
+
+            <!-- Quran Recitation Section (Hidden by default) -->
+            <section class="quran-section" id="quran-section" style="display: none;">
+                <h2 class="section-title">تلاوة القرآن الكريم</h2>
+                <p class="quran-description">
+                    من قرأ حرفًا من كتاب الله فله به حسنة، واللهم اجعل ثواب التلاوة على روح الفقيد
+                </p>
+                <div class="audio-player">
+                    <audio controls id="quran-audio">
+                        <source src="./quran-recitation.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم تشغيل الملفات الصوتية
+                    </audio>
+                </div>
+            </section>
+
+            <!-- Share Section -->
+            <section class="share-section">
+                <h3 class="share-title">شارك الأجر</h3>
+                <p class="share-description">شارك هذا الموقع مع الآخرين ليشاركوا في الدعاء والتسبيح للمرحوم</p>
+                <div class="share-buttons">
+                    <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                        <span>مشاركة على واتساب</span>
+                    </button>
+                    <button class="share-btn facebook" onclick="shareOnFacebook()">
+                        <span>مشاركة على فيسبوك</span>
+                    </button>
+                    <button class="share-btn copy" onclick="copyLink()">
+                        <span>نسخ الرابط</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-prayer">
+                اللهم أنر قبره وآنس وحشته، وارحمه برحمتك يا أرحم الراحمين.
+            </p>
+            <p class="footer-note">
+                هذا الموقع صدقة جارية لروح المرحوم حازم محمد عقل
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

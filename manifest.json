@@ -1,0 +1,29 @@
+{
+    "name": "صدقة جارية على روح المرحوم حازم محمد عقل",
+    "short_name": "ذكرى حازم",
+    "description": "موقع تذكاري للمرحوم حازم محمد عقل مع عداد تسبيح",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#f8f9fa",
+    "theme_color": "#2c5530",
+    "orientation": "portrait",
+    "lang": "ar",
+    "dir": "rtl",
+    "icons": [
+        {
+            "src": "./memorial-placeholder.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["lifestyle", "utilities"],
+    "screenshots": [
+        {
+            "src": "./memorial-placeholder.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ]
+}
+
